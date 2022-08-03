@@ -51,6 +51,7 @@ const DetailsScreen = () => {
   const searchFuse = !!universities?.length
     ? new Fuse(universities as readonly IUseCountry[], {
         keys: ["name"],
+        threshold: 0.3,
       })
     : undefined;
 
